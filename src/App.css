@@ -3,6 +3,7 @@
     gap:5px;
     justify-content: space-evenly;
     flex-wrap: wrap;
+    margin-bottom: 10px;
 }
 
 span{

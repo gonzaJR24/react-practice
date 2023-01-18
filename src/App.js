@@ -1,5 +1,6 @@
 import './App.css';
 import Cena from "./components/Cena"
+import Filter from './components/Filter';
 /* import Card from './components/Card.js';
 import Photo1 from "./images/rey_sisebuto.png"
 import Photo2 from "./images/rey_leogivildo.png"
@@ -48,11 +49,13 @@ function App() {
     <>
     <div className="card-container">
       {reyes.map(rey=>{
-      return <Cena texto={`${rey.nombre.toUpperCase()} ha comido ${rey.vacasComidas} vacas en sus ${rey.reinado} años de reinado`}
+      return <Cena key={rey.nombre} texto={`${rey.nombre.toUpperCase()} ha comido ${rey.vacasComidas} vacas en sus ${rey.reinado} años de reinado`}
       img={rey.nombre.toLowerCase()}
       />}
       )}
     </div>
+
+    <Filter className="nombreRey" rey={reyes}  style={{color:"red"}}/>
     </>
   )
 }
